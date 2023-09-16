@@ -19,9 +19,19 @@ const barbearia = {
   
   
 function buscaCortePorId(id) {
+    for(let i = 0; i < barbearia.cortes.length; i++){
+        if(barbearia.cortes[i].id === id){
+            return barbearia.cortes[i]
+        }
+    }
 }
 
 function buscaBarbaPorId(id) {
+    for(let i = 0; i < barbearia.barbas.length; i++){
+        if(barbearia.barbas[i].id === id){
+            return barbearia.barbas[i]
+        }
+    }
 }
 
 function verificaStatusBarbearia() {
@@ -37,6 +47,13 @@ function criaPedido(nomeCliente, corteId, barbaId) {
 }
 
 function atualizarServico(lista, id, valor, tipo) {
+    for(let i = 0; i < lista.length; i++){
+        if(id == lista[i].id || (tipo == null || preco == null)){
+            lista[i].tipo = tipo;
+            lista[i].valor = preco;
+            console.log(atualizarServico(lista, id, valor, tipo))
+        }
+    }
 }
 
 function calculaTotal(pedido) {
