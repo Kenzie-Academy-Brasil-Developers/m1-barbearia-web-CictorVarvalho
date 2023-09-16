@@ -35,15 +35,32 @@ function buscaBarbaPorId(id) {
 }
 
 function verificaStatusBarbearia() {
+    if(barbearia.estaAberto === true){
+        return `Estamos abertos`
+    } else {
+        return `⁠Estamos fechados`
+    }
 }
 
 function retornaTodosCortes() {
+    return barbearia.cortes
 }
 
 function retornaTodasBarbas() {
+    return barbearia.barbas
 }
 
 function criaPedido(nomeCliente, corteId, barbaId) {
+    buscaCortePorId 
+
+
+    const pedido = {
+        nome: `João`,
+        pedidoCorte: `Militar`,
+        pedidoCortePreco: 20,
+        pedidoBarba: `Capitão Jack`,
+        pedidoBarbaPreco: 20
+    }
 }
 
 function atualizarServico(lista, id, valor, tipo) {
@@ -51,12 +68,16 @@ function atualizarServico(lista, id, valor, tipo) {
         if(id == lista[i].id || (tipo == null || preco == null)){
             lista[i].tipo = tipo;
             lista[i].valor = preco;
-            console.log(atualizarServico(lista, id, valor, tipo))
+            return lista[i]
         }
     }
 }
 
 function calculaTotal(pedido) {
+    let total = 0
+    for(let i = 0; i < pedido.length; i++){
+        total += 
+    }
 }
   
   
