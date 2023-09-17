@@ -51,33 +51,30 @@ function retornaTodasBarbas() {
 }
 
 function criaPedido(nomeCliente, corteId, barbaId) {
-    buscaCortePorId 
+    let corte = buscaCortePorId(corteId)
+    let barba = buscaBarbaPorId(barbaId)
 
-
-    const pedido = {
+    let pedido = {
         nome: `João`,
         pedidoCorte: `Militar`,
         pedidoCortePreco: 20,
         pedidoBarba: `Capitão Jack`,
         pedidoBarbaPreco: 20
     }
+    return pedido
 }
 
 function atualizarServico(lista, id, valor, tipo) {
     for(let i = 0; i < lista.length; i++){
-        if(id == lista[i].id || (tipo == null || preco == null)){
-            lista[i].tipo = tipo;
-            lista[i].valor = preco;
-            return lista[i]
+        let itemDaLista = lista[i]
+        if(itemDaLista.id === id){
+            itemDaLista.tipo = tipo
+            itemDaLista.valor = valor
         }
     }
+    return lista
 }
 
 function calculaTotal(pedido) {
-    let total = 0
-    for(let i = 0; i < pedido.length; i++){
-        total += 
-    }
+    return pedido.pedidoCortePreco + pedido.pedidoBarbaPreco
 }
-  
-  
