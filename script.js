@@ -55,11 +55,11 @@ function criaPedido(nomeCliente, corteId, barbaId) {
     let barba = buscaBarbaPorId(barbaId)
 
     let pedido = {
-        nome: `João`,
-        pedidoCorte: `Militar`,
-        pedidoCortePreco: 20,
-        pedidoBarba: `Capitão Jack`,
-        pedidoBarbaPreco: 20
+        nome: nomeCliente,
+        pedidoCorte: corte.tipo,
+        pedidoCortePreco: corte.preco,
+        pedidoBarba: barba.tipo,
+        pedidoBarbaPreco: barba.preco
     }
     return pedido
 }
