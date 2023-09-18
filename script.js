@@ -57,9 +57,9 @@ function criaPedido(nomeCliente, corteId, barbaId) {
     let pedido = {
         nome: nomeCliente,
         pedidoCorte: corte.tipo,
-        pedidoCortePreco: corte.preco,
+        pedidoCortePreco: corte.valor,
         pedidoBarba: barba.tipo,
-        pedidoBarbaPreco: barba.preco
+        pedidoBarbaPreco: barba.valor
     }
     return pedido
 }
